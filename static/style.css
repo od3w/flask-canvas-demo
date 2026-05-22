@@ -1,0 +1,133 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 16px;
+    padding: 36px 44px 28px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    max-width: 380px;
+    width: 100%;
+}
+
+h1 {
+    margin: 0 0 6px;
+    color: #333;
+    font-size: 1.6em;
+}
+
+.hint {
+    color: #666;
+    margin: 0 0 20px;
+    font-size: 0.95em;
+}
+
+canvas {
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: white;
+    cursor: crosshair;
+    touch-action: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 18px 0 0;
+}
+
+button {
+    padding: 10px 26px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    background: #aaa;
+    transition: background 0.15s, transform 0.1s;
+    font-weight: 500;
+}
+
+button.primary { background: #667eea; }
+button:hover { transform: translateY(-1px); }
+button.primary:hover { background: #5568d3; }
+button#clear:hover { background: #888; }
+button:active { transform: translateY(0); }
+
+.result {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 10px;
+    min-height: 50px;
+    background: #f5f5f7;
+    color: #888;
+    transition: background 0.2s;
+}
+
+.result.show {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    color: #2e7d32;
+}
+
+.result.error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.big-digit {
+    font-size: 64px;
+    font-weight: 700;
+    color: #2e7d32;
+    line-height: 1;
+    margin: 4px 0;
+}
+
+.confidence {
+    font-size: 14px;
+    color: #4a784d;
+    margin-top: 4px;
+}
+
+.top3 {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 14px;
+    font-size: 13px;
+}
+
+.top3 span {
+    background: white;
+    padding: 5px 11px;
+    border-radius: 6px;
+    border: 1px solid #c8e6c9;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+.top3 span:first-child {
+    background: #43a047;
+    color: white;
+    border-color: #43a047;
+}
+
+.footer {
+    margin-top: 24px;
+    margin-bottom: 0;
+    color: #aaa;
+    font-size: 12px;
+}

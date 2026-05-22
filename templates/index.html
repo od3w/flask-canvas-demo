@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNIST 手寫數字辨識</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 MNIST 手寫數字辨識</h1>
+        <p class="hint">在下面方框畫一個數字（0–9），按「辨識」</p>
+
+        <canvas id="canvas" width="280" height="280"></canvas>
+
+        <div class="controls">
+            <button id="clear" type="button">清除</button>
+            <button id="predict" type="button" class="primary">辨識</button>
+        </div>
+
+        <div id="result" class="result"></div>
+
+        <p class="footer">
+            Flask + Keras + HTML Canvas　|　模型：MNIST CNN（測試準確率 ~99%）
+        </p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
